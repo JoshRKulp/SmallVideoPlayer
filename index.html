@@ -1,0 +1,33 @@
+<html>
+<head>
+ 
+<script language="JavaScript">
+	window.onload = resize();
+	function resize(){
+		window.resizeTo(400,400)
+		window.moveTo(0,0);
+	}
+</script>
+<style>
+	.container {
+            width: 100%;
+          }
+</style>
+ 
+ 
+</head>
+<body>
+
+	<div class="container">
+        <div class="vendor">
+        	<iframe width="560" height="315" src="http://www.youtube.com/embed/tqfFizAqKpI" frameborder="0" allowfullscreen></iframe>
+	      </div>
+	</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+      <script src="./js/jquery.fitvids.js"></script>
+      <script>
+        // Basic FitVids Test
+        $(".container").fitVids();
+      </script>
+</body>
+</html>
