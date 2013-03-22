@@ -1,0 +1,37 @@
+/* line 13, ../scss/global.scss */
+body {
+  background: url(../img/bg.png);
+}
+
+/* line 17, ../scss/global.scss */
+.container {
+  width: 100%;
+}
+
+/* line 21, ../scss/global.scss */
+.videoinput {
+  background: white;
+  padding: 4px;
+}
+/* line 24, ../scss/global.scss */
+.videoinput input {
+  width: 49%;
+  padding: 4px;
+}
+@media (max-width: 650px) {
+  /* line 24, ../scss/global.scss */
+  .videoinput input {
+    width: 99%;
+  }
+}
+/* line 29, ../scss/global.scss */
+.videoinput p {
+  text-align: center;
+  font-size: 20px;
+}
+@media (max-width: 650px) {
+  /* line 29, ../scss/global.scss */
+  .videoinput p {
+    font-size: 10px;
+  }
+}

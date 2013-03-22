@@ -1,32 +1,39 @@
 <html>
 <head>
- 
+ <title>Small YouTube Video Player</title>
 <script language="JavaScript">
 	window.onload = resize();
 	function resize(){
 		window.resizeTo(400,400)
 		window.moveTo(0,0);
 	}
+
+	function changeVid(){
+		valueMain = $("#txt_video").val().slice(($("#txt_video").val().indexOf('='))+1); 
+		value = "http://www.youtube.com/embed/" + valueMain;
+		//alert(value);
+		$("#youTubeVideo").attr("src", value);
+		$("#txt_video").val() = "";
+	}
 </script>
-<style>
-	.container {
-            width: 100%;
-          }
-</style>
- 
- 
+  <link href="css/global.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-
 	<div class="container">
         <div class="vendor">
-        	<iframe width="560" height="315" src="http://www.youtube.com/embed/tqfFizAqKpI" frameborder="0" allowfullscreen></iframe>
+        	<iframe width="560" height="315" id="youTubeVideo" src="http://www.youtube.com/embed/2JBiVQajPEE" frameborder="0" allowfullscreen></iframe>
 	      </div>
+	</div>
+	<div class="videoinput">
+		<input type="text" id="txt_video" />
+		<input type="button" id="btn_video" value="Video" onclick="changeVid()"/>
+		<p>I needed a video player that would auto resize so I could have a small player on the screen while I am doing other work. I made this with <a href="http://fitvidsjs.com/">fitvid.js</a>.
+		<br><br>	
+		You can input the full link to the youtube video or the small id after the v=</p>
 	</div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
       <script src="./js/jquery.fitvids.js"></script>
       <script>
-        // Basic FitVids Test
         $(".container").fitVids();
       </script>
 </body>
